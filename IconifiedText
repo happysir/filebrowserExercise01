@@ -17,10 +17,6 @@ public class IconifiedText implements Comparable<IconifiedText>{
 		mSelectable = selectable;
 	}
 	
-	public String getText() {
-		return mText;
-	}
-	
 	public void setText(String text) {
 		mText = text;
 	}
@@ -28,7 +24,11 @@ public class IconifiedText implements Comparable<IconifiedText>{
 	public void setIcon(Drawable icon) {
 		mIcon = icon;
 	}
-	
+
+	public String getText() {
+		return mText;
+	}	
+
 	public Drawable getIcon() {
 		return mIcon;
 	}
