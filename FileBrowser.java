@@ -53,9 +53,6 @@ public class FileBrowser extends ListActivity {
 				currentIcon = getResources().getDrawable(R.drawable.folder);
 			}else{
 				String fileName = currentFile.getName();
-		
-			/*geng bu tong wen jian de tu biao she ding*/
-
 			}
 			switch (this.displayMode) {
 				case ABSOLUTE:
@@ -64,12 +61,11 @@ public class FileBrowser extends ListActivity {
 					break;
 				case RELATIVE: 
 					int currentPathStringLenght = this.currentDirectory.
-													getAbsolutePath().length();
+					getAbsolutePath().length();
 					this.directoryEntries.add(new IconifiedText(
 							currentFile.getAbsolutePath().
 							substring(currentPathStringLenght),
 							currentIcon));
-
 					break;
 			}
 		}
@@ -94,7 +90,7 @@ public class FileBrowser extends ListActivity {
 			switch(this.displayMode){
 				case RELATIVE:
 					clickedFile = new File(this.currentDirectory.getAbsolutePath() 
-												+ this.directoryEntries.get(selectionRowID).getText());
+							+ this.directoryEntries.get(selectionRowID).getText());
 					break;
 				case ABSOLUTE:
 					clickedFile = new File(this.directoryEntries.get(selectionRowID).getText());
